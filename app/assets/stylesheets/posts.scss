@@ -1,0 +1,39 @@
+@import "content.scss";
+
+.article{
+  margin: 0 4% 3%;
+  background-color: $navbar_background;
+  border: 1px solid $navbar_border;
+  @include border-radius(5px);
+  .cover{
+  	width: 140px; 
+  	height: 140px; 
+  	margin: 0 auto; 
+  	margin-top: 5px;
+  }	
+  h2{
+  	text-align: center; 
+  	color: $navbar_text; 
+  }
+  hr{
+  	margin: 12px 0; 
+  	width: 50%; 
+  	height: 8px; 
+  	margin-left: auto; 
+  	margin-right: auto; 
+  	background-color: $hr; 
+  	color: $hr; 
+  	border: 0 none;
+  }
+  .text-description{
+    height: 120px !important;
+    margin-left: 3% !important;
+    color: $navbar_text !important;
+  }
+  .btn{
+  	display: block; 
+  	margin-left: auto; 
+  	margin-right: auto;
+  }
+}
+

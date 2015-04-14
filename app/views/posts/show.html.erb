@@ -1,0 +1,24 @@
+<% provide(:categories, "active") %>
+<% @page_title = "Grubyblog | #{@post.title}" %>
+
+<div class="col-sm-12 blog-main">
+  <div class="blog-post">
+    <h2 class="blog-post-title"><%= @post.title %></h2>
+    <table class="infos">
+      <tr>  
+        <td><%= image_tag "cat.png", :class => "ico" %></td> 
+        <td><%= link_to @post.category.name, category_path(@post.category) %></td>
+        <td>/</td>
+        <td><%= image_tag "cal.png", :class => "ico" %></td> 
+        <td><%= @post.created_at.strftime("%d.%m.%Y") %></td>
+      </tr>
+    </table>
+    <p class="text-justify"><%= raw coderay(@post.content) %></p>
+    <table class="infos">
+      <tr>  
+        <td><%= image_tag "tag.png", :class => "ico" %></td> 
+        <td><%= @post.tag %></td>
+      </tr>
+    </table>
+  </div>
+</div>  

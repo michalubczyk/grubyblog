@@ -1,0 +1,24 @@
+<% provide(:categories, "active") %>
+<% @page_title = "Grubyblog | #{@category.name}" %>
+
+<div class="table-responsive">
+  <h2><%= @category.name %></h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Temat</th>
+        <th>Tagi</th>
+        <th>Dodano</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @category.posts.each do |post| %>
+	  <tr>
+		<td><%= link_to post.title, post %></td>
+		<td><%= post.tag %></td>
+		<td><%= post.created_at.strftime("%d.%m.%Y") %></td>
+	  </tr>
+	<% end %>
+    </tbody>
+  </table>
+</div>

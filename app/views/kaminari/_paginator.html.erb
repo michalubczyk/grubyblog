@@ -1,0 +1,6 @@
+<%= paginator.render do -%>
+  <ul class="pager col-md-12">
+    <li class="previous disabled"><%= prev_page_tag unless current_page.first? %></li>
+    <li class="next"><%= next_page_tag unless current_page.last? %></li>
+  </ul>
+<% end -%>

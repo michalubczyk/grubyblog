@@ -1,0 +1,38 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h2>Kategorie</h2>
+        <ul>
+        <% Category.all.each do |category| %>
+          <li><%= link_to category.name, category_path(category) %></li><br>
+        <% end %>
+        </ul>
+        <h2>Zaprzyjaźnione</h2>
+        <ul>
+          <li><%= link_to "Miroslaw Zelent", "http://miroslawzelent.pl/", :target => "_blank" %></li>
+          <li><%= link_to "E-learning", "http://informatyka.zsme.edu.pl", :target => "_blank" %></li>
+          <li><%= link_to "Forum programistyczne DevStart", "http://devstart.pl", :target => "_blank" %></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="circle"><%= image_tag "author.png" %></div>
+        <h2>Autor</h2>
+        <p>Cześć! Nazywam się Michał i z zamiłowania jestem programistą - niestety z tendencją do zapominania rzeczy, których się uczę ;) 
+<i>Grubego</i> stworzyłem właśnie po to, by zbierać swoje notatki, do których często zaglądam i które zdecydowanie ułatwiają mi życie. Mam 
+nadzieję, że znajdziesz tutaj również coś dla siebie. <br> 
+Blog poświęcony jest głównie językowi Ruby i jego framework’owi - Rails. Wierzę jednak, że z czasem pojawią się tutaj również wpisy dotyczące innych technologii czy też narzędzi wspierających proces tworzenia i testowania aplikacji.</p>
+      </div>        
+      <div class="col-lg-4">
+        <div class="circle"><%= image_tag "email.png" %></div>
+        <h2>Kontakt</h2>
+        <p>Jeśli chcesz się ze mną skontaktować, to pisz na adres:</p>
+        <h4>grubyblog@gmail.com</h4>
+        <br>
+        <p>Moje repozytoria:</p>
+        <div class="circle"><%= link_to image_tag("git.png"), "https://github.com/michalubczyk", :target => "_blank" %></div>
+      </div>
+    </div> 
+    <p class="rights">&copy; 2014 - 2015 g<span class="ruby">ruby</span>blog.pl | All rights reserved. Designed and developed by me in Rails.</p>
+  </div>
+</footer>

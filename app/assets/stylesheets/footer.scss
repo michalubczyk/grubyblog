@@ -1,0 +1,36 @@
+footer{
+  background-color: $footer_background;
+  .container{
+    a, a:link, a:visited{
+      color: $navbar_text; 
+      &:hover{color: $pink;}
+    } 
+    p{
+      text-align: justify; 
+      color: $navbar_text;
+    }
+    .row{margin: 2% 0;}
+    h2{
+      text-align: left; 
+      color: $blue; 
+      &:hover{cursor: default;}
+    }
+    h4{text-align: center; color: $white;}
+    ul{list-style-type: none;}
+    .rights{
+      padding: 1% 0; 
+      border-top: 1px dotted $navbar_text; 
+      color: $navbar_text;
+    }
+    .circle{
+      @include border-radius(50%); 
+      width: 99px; 
+      height: 99px; 
+      background-color: $pink; 
+      text-align: center; 
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    .ruby{color: $pink;}
+  }
+}
